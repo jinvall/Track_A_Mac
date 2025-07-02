@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Track-A-Mac Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+  <div id="tabs">
+    <a href="{{ url_for('routes.dynamic_view') }}" class="{% if request.path.endswith('dynamic') %}active{% endif %}">Dynamic</a>
+    <a href="{{ url_for('routes.convoy_view') }}" class="{% if request.path.endswith('convoy') %}active{% endif %}">Convoy</a>
+    <a href="{{ url_for('routes.all_view') }}" class="{% if request.path.endswith('all') %}active{% endif %}">All</a>
+    <a href="{{ url_for('routes.ghost_view') }}" class="{% if request.path.endswith('ghosts') %}active{% endif %}">👻 Ghosts</a>
+  </div>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
+

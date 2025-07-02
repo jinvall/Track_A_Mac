@@ -1,0 +1,152 @@
+/* ✅ General Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #d0d0d8;
+  margin: 20px;
+  text-align: center;
+  background-image: url('/static/image.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* ✅ Logo Placement */
+#logo-container {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 120px;
+}
+
+#logo-container img {
+  width: 100%;
+  opacity: 0.85;
+}
+
+/* ✅ Header Styling */
+h1, h2 {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+  margin-bottom: 10px;
+}
+
+/* ✅ Controls */
+.controls {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #5c4672;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #49355a;
+}
+
+button:focus {
+  outline: 2px solid #c2a5d8;
+  outline-offset: 2px;
+}
+
+/* ✅ Table Styling */
+.table-container {
+  width: 90%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(38, 12, 62, 0.85);
+  box-shadow: 0 0 8px #00000050;
+}
+
+thead {
+  background-color: #5c4672;
+  color: #fff;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #444;
+}
+
+th {
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+tr:hover {
+  background-color: #3b234e;
+}
+
+/* ✅ Mobility Status Styling via Classes */
+.mobility-Stationary { color: #ff4444; font-weight: bold; text-transform: uppercase; }
+.mobility-Low { color: #a778b1; font-weight: bold; text-transform: uppercase; }
+.mobility-Moderate { color: #c2a5d8; font-weight: bold; text-transform: uppercase; }
+.mobility-High { color: #64c864; font-weight: bold; text-transform: uppercase; }
+.mobility-Highly { color: #4cbec7; font-weight: bold; text-transform: uppercase; }
+
+/* ✅ Chart Styling */
+.chart-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+canvas {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00000040;
+}
+
+/* ✅ Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* ✅ Responsive Enhancements */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  table, th, td {
+    font-size: 13px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
+
+.ssid-link {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ssid-link:hover {
+  color: #ffa500;
+  text-decoration: underline;
+}
+.ghost-row {
+  background-color: #282a36;
+  color: #c3b9ff;
+  font-style: italic;
+}
